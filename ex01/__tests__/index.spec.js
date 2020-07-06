@@ -1,7 +1,7 @@
 test('练习01 自动化生成路由配置',() => {
     const {getRouter} = require('../index')
     const ret = getRouter(__dirname + '/data')
-    expect(getRouter(__dirname + '/data')).toBe(
+    expect(ret).toBe(
 `
 export default new Router({
     mode: 'history',
@@ -19,6 +19,6 @@ export default new Router({
 },
 
     ]
-})`
-    )
+})
+`)
 })
