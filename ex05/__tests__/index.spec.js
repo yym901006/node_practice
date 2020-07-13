@@ -18,6 +18,7 @@ test('练习05 订阅发布实现', (done) => {
 
     setTimeout(() => {
         const calls = mockFn.mock.calls
+        console.info("calls",calls)
         expect(calls.length).toBe(4);
         expect(calls[0][0]).toBe('连接1完成');
         expect(calls[1][0]).toBe('连接1完成');
